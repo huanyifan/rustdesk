@@ -1,0 +1,12 @@
+name: Build All Platforms (Flutter)
+
+on:
+  workflow_dispatch:
+
+jobs:
+  run-flutter-build:
+    uses: ./.github/workflows/flutter-build.yml
+    secrets: inherit
+    with:
+      upload-artifact: true
+      upload-tag: "custom-build"
